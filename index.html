@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homenagem à Minha Esposa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ff0000, #ff002b);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .photos img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            .message {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            border: 2px solid #ff0303;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+        }
+
+        .message p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        #counter {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        #Music{
+
+            padding: 15px 30px; /* Define o tamanho do botão */
+            font-size: 16px; /* Define o tamanho da fonte */
+            font-weight: bold; /* Define o peso da fonte */
+            color: white; /* Cor do texto */
+            background: linear-gradient(45deg, #491212, #850808); /* Gradiente de fundo */
+             border: none; /* Remove a borda padrão */
+            border-radius: 25px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            cursor: pointer; /* Aponta o cursor como uma mãozinha */
+            transition: all 0.6s ease; /* Transição suave para os efeitos */
+}
+        
+
+    </style>
+</head>
+<body>
+   
+    <audio id="Musica" loop>
+        <source src="Fotos/Musica.mp3" type="audio/mpeg">
+    </audio>
+   
+    <button id="Music" onclick="document.getElementById('Musica').play()"> Clique para ouvir sua musica favorita</button>
+
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <h1>Eu Te Amo Maria Vitoria</h1>
+    </header>
+<br>
+    <h1>Feliz 4 anos de nós</h1>
+    <h1>Quatro anos transformando sonhos em realidade juntos</h1>
+
+    <div class="photos">
+        <img src="Fotos/Gif Casal.gif" alt="Foto 1">
+       
+    </div>
+
+    <div class="message">
+        <p>
+            Meu amor, hoje celebramos não apenas mais um ano juntos, mas cada sorriso, cada abraço, cada momento que tornou nossa história tão especial. Eu sou eternamente grato por compartilhar minha vida com você.
+        </p>
+        
+        <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 500; font-size: 40px;">Já se passaram:</h1>
+        
+        
+        <p><span id="counter"></span></p>
+
+        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 400; font-size: 30px;"> Desde que nos conhecemos, e cada um deles foi uma bênção por ter você ao meu lado.</p>
+
+    </div>
+
+    <footer>
+        <p>Com todo meu amor, para sempre seu. ❤️</p>
+        
+        <h6>© Desenvolvido pelo Alessandrinho seu amor</h6>
+    </footer>
+
+    <script>
+        const startDate = new Date('2020-12-20'); // Substitua pela data em que vocês se conheceram, ex: '2000-01-01'
+
+        function updateCounter() {
+            const today = new Date();
+            const difference = today - startDate;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('counter').textContent = `${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+        }
+
+        setInterval(updateCounter, 1000);
+        updateCounter();
+    </script>
+</body>
+</html>
